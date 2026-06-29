@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eclipse Tracker 2027</title>
+  <link rel="stylesheet" href="styles.css"/>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+
+<body>
+  <header>
+    <h1>🌘 Eclipse Tracker</h1>
+    <p>Descubre dónde ver el próximo eclipse y cómo aprovecharlo</p>
+  </header>
+
+  <section class="countdown">
+    <h2>Cuenta atrás</h2>
+    <div id="timer"></div>
+  </section>
+
+  <section class="search">
+    <h2>Busca tu ciudad</h2>
+    <input id="cityInput" placeholder="Barcelona, Madrid, Paris..." />
+    <button onclick="searchCity()">Buscar</button>
+    <div id="result"></div>
+  </section>
+
+  <section class="map-section">
+    <h2>Mapa de visibilidad</h2>
+    <div id="map"></div>
+  </section>
+
+  <section class="offers">
+    <h2>Prepara tu experiencia</h2>
+    <ul>
+      <li><a href="https://amazon.es" target="_blank">🔭 Gafas de eclipse recomendadas</a></li>
+      <li><a href="https://booking.com" target="_blank">🏨 Hoteles en zonas de visibilidad</a></li>
+      <li><a href="/pdf/guia-eclipse.pdf">📘 Guía completa del eclipse</a></li>
+    </ul>
+  </section>
+
+  <section class="signup">
+    <h2>Recibe alertas del eclipse</h2>
+    <input id="email" placeholder="Tu email"/>
+    <button onclick="subscribe()">Quiero avisos</button>
+    <p id="msg"></p>
+  </section>
+
+  <footer>
+    <p>© Eclipse Tracker</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
